@@ -61,7 +61,7 @@ export const useAuthstore = create((set, get) => ({
         try {
             const res = await axiosInstance.post("/auth/login", data);
             set({ authUser: res.data });
-            console.log(res.data);
+            // console.log(res.data);
             toast.success("logged in successfully");
             get().connectSocket();
         } catch (error) {
@@ -96,7 +96,7 @@ export const useAuthstore = create((set, get) => ({
             },
         });
         socket.connect();
-         console.log({socket});
+         // console.log({socket});
         set({ socket:socket });
 
         socket.on("getOnlineUsers", (userIds) => {
