@@ -16,13 +16,13 @@ export default function App() {
   const { authUser, checkAuth, ischekingAuth,onlineUsers } = useAuthstore();
   const {theme} = useThemestore();
 
-  console.log({onlineUsers});
+  // console.log({onlineUsers});
 
   useEffect(() => {
     checkAuth()
   }, [checkAuth]);
 
-  console.log(authUser);
+  // console.log(authUser);
 
   if (ischekingAuth && !authUser) {
     return (
